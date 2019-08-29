@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+/*para hacer una llamada a otos estilos estilos dentro de la carpteta*/ 
+@import url(menu.css); 
+@import url(banner.css);
+@import url(blog.css);
+@import url(info.css);
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /*esto es para que todo este dentro de un modelo de caja*/
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+header {
+	width: 100%;
+	height: 50px;
+	background: #333;
+	color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100; /*para que este siempre delante de los elementos*/
+}
+
+.contenedor {
+	width: 98%
+	margin: auto;
+}
+
+h1{
+	float: left;
+}
+
+header .contenedor {
+	display: table;
+}
+
+section {  /*atributos para todos los section*/
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+#Bienvenidos {
+	text-align: justify;
+}
+
+footer .contenedor {
+	display: flex;
+	flex-wrap: wrap; /*para que si no cabe lo pase para abajo*/
+	justify-content: center;
+	padding-bottom: 25px;
+}
+
+.copy {
+	font-size: 20px;
+}
+
+.sociales {
+	width: 100%;
+	text-align: center;
+	font-size: 28px;
+}
+
+.sociales a {
+	color: #333;
+	text-decoration: none; /*quita la decoración de un enlace*/
+}
+
+@media(min-width: 768px){ /*cuando la pantalla este a un minimo de 768px*/
+/*los iconos de las redes sociales cambian su ancho*/
+	.sociales{
+		width: auto; /*se vuelven automaticos*/
+	}
+
+	footer .contenedor {
+		justify-content: space-between; /*que el contenido deja un espacio en medio*/
+	}
+}

@@ -1,0 +1,61 @@
+#banner {
+	margin-top: 50px;
+	position: relative;
+}
+
+#banner img { /*atributos de img dentro de banner*/
+	width: 100%;
+	height: 100%;
+}
+
+#banner .contenedor { /*atributos de contenedor dentro de banner*/
+	position: absolute; /*para que obtenga su posicion de banner*/
+	/*para centrarlo*/
+	top: 50%;
+	left: 35%;
+	transform: translateX(-50%) translateY(-50%);
+	color: #000;
+}
+
+#banner p {
+	font-size: 28px;
+}
+
+#banner a {   /*atributos de a dentro de banner*/
+	display: block;
+	width: 100px;
+	color: #fff;
+	text-decoration: none;
+	padding: 7px;
+	margin-top: 10px;
+	border: 3px solid #fff;
+}
+
+#banner a:hover {
+	background: rgba(51,51,51,0.5);
+}
+
+@media (min-width: 480px) { /*si el tamaño de la pantalla tiene un minimo de 480 px*/
+/*cambiamos los tamaños de lo que esta dentro de banner*/
+	#banner h2 {
+		font-size: 40px
+	}
+
+	#banner a {
+		margin-top: 25px;
+	}
+}
+
+@media (min-width: 768px) { /*si el tamaño de la pantalla tiene un minimo de 768 px*/
+/*generalmente tamaño de tablets*/
+	#banner {
+		height: 300px;
+		overflow: hidden;
+	}
+}
+
+@media (min-width: 1024px) {/*si el tamaño de la pantalla tiene un minimo de 1024 px*/
+	#banner {
+		height: 500px;
+	}
+}

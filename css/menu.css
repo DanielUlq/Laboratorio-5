@@ -1,0 +1,56 @@
+#menu-bar {
+	display: none;
+}
+
+header label { /*atributos para el label dentro de header*/
+	float: right;
+	font-size: 28px;
+	margin: 6px 0; /*margen de 6 pixeles desde arriba*/
+}
+
+.menu{
+	position: absolute;
+	top: 50px;  /*para que inicie despues del header*/
+	left: 0;
+	width: 100%;
+	height: 100vh; /*vh para ocupar simepre el 100% del alto de la ventana*/
+	background: rgba(51,51,51,0.9);
+	transition: all 0.5s; /*para mostrar menu*/
+	transform: translateX(-100%); /*para ocultar menu*/
+}
+
+.menu a {
+	display: block;
+	color: #fff;
+	height: 50px;
+	text-decoration: none;
+	padding: 15px;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.menu a:hover { /*cuando pase el mouse se cambie el color*/
+	background: rgba(255,255,255,0.3);
+}
+
+#menu-bar:checked ~ .menu {
+	transform: translateX(0%);
+}
+
+@media (min-width: 1024px) { /*cuando la pantalla tenga un minimo de 1024 px*/
+	.menu{
+		position: static;  /*el menu cambia y se vuelve estatico*/
+		width: auto;
+		height: auto;
+		transform: translateX(0%); /*el menu ya no estara oculto*/
+		float: right;
+		display: flex; /*para que los elementos esten al lado uno de otros*/	
+	}
+
+	.menu a {
+		border: none;
+	}
+
+	header label { /*al icono de menu */
+		display: none; /*ocultamos icono del menu*/
+	}
+}

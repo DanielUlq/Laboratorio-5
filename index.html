@@ -1,0 +1,105 @@
+<!DOCTYPE html> <!se establece el documento como HTML>
+<html>
+	<head>
+		<title>Mascotas</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1 maximum-scale=1, minimum-scale=1">
+		<link rel="stylesheet" href="css/fontello.css">
+		<link rel="stylesheet" href="css/estilos.css">
+		<script type="text/javascript" src="javascript/alertjs.js"></script>
+		<!hacemos referencia a un css que contiene los iconos>
+	</head>
+
+	<body>
+		<header> <!utilzamos header para el encabezado de la pagina>
+			<div class="contenedor">
+				<h1 class="icon-giraffe">Mascotas</h1> <!con el class ponemos un icono>
+				<input type="checkbox" id="menu-bar"> <!se establece un input de tipo checkbox>
+				<label class="icon-menu" for="menu-bar"></label> <!hacemos referencia l input checkbox>
+				<nav class="menu">  <!creamos un menu> 
+					<a href="">Inicio</a>
+					<a href="">Mascotas</a>
+					<a href="">Contacto</a>
+					<a href="">Blog</a>
+				</nav>
+			</div>	
+		</header>
+
+		<main> <! main es usado para indicar el contenido central de una pagina>
+			<section id="banner">   <!section es usado para separar el contenido>
+				<img src="imagenes/ba.jpg">
+				<div class="contenedor">
+					<p>¿Cual es tu mascota favorita?</p>
+					<a href="https://www.prensalibre.com/vida/salud-y-familia/las-10-preguntas-mas-comunes-sobre-el-cuidado-de-las-mascotas/" target="_blank" onclick="leerMas()" >Leer más</a>
+				</div>	
+			</section>
+
+			<section id="Bienvenidos">
+				<h2 id="titulo1" onclick="cambiaColor()">Bienvenido al club de fans</h2>
+				<p id="parrafo1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+			</section>
+
+			<section id="blog">
+				<h3>Lo ultimo de nuestro blog</h3>
+				<div class="contenedor">
+					<article>
+						<img src="imagenes/m1.jpg">
+						<h4>Escoge tu mascota perfecta</h4>
+					</article>
+					<article>
+						<img src="imagenes/m2.jpg">
+						<h4>Los animales necesitan cariño</h4>
+					</article>	
+					<article>
+						<img src="imagenes/m3.jpg">
+						<h4>Tu mascota te necesita</h4>
+					</article>
+
+				</div>
+			</section>
+
+			<section id="info">
+				<h3>Para muchos de nosotros las mascotas no son simples compañeros, son miembros de la familia</h3>
+				<div class="contenedor">
+					<div class="info-pet">
+						<img src="imagenes/1.jpg" id="mascota1" onclick="nombre1()">
+						<h4 id="nombre1">Luck</h4>
+					</div>
+
+					<div class="info-pet">
+						<img src="imagenes/2.jpg" id="mascota2" onclick="nombre2()">
+						<h4 id="nombre2">Peluso</h4>
+					</div>
+
+					<div class="info-pet">
+						<img src="imagenes/3.jpg" id="mascota3" onclick="nombre3()">
+						<h4 id="nombre3">Bonie</h4>
+					</div>
+
+					<div class="info-pet">
+						<img src="imagenes/4.jpg" id="mascota4" onclick="nombre4()">
+						<h4 id="nombre4">Nemo</h4>
+					</div>																				
+				</div>
+			</section>			
+		</main>
+
+		<footer id="pie" onclick="consola()">  <!footer es usado para los finales de pagina>
+			<div class="contenedor">
+				<p class="copy">Mascotas &copy; 2019</p>
+				<div class="sociales">
+					<a class="icon-facebook" href="https://www.facebook.com/" target="_blank"></a>
+					<a class="icon-instagram" href="https://www.instagram.com" target="_blank"></a>
+					<a class="icon-twitter" href="https://twitter.com" target="_blank"></a>
+					<a class="icon-gplus" href="https://mail.google.com" target="_blank"></a>
+				</div>
+			</div>
+		</footer>
+
+		<!se utilizo un script en el html para que al momento de cargar la pagina muestre un mensaje
+		de bienvenida>
+		<script type="text/javascript">
+			window.onload=alert('Hola, Bienvenido a la página de mascotas')
+		</script>
+	</body>
+</html>
